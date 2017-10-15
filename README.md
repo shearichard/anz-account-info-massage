@@ -44,4 +44,4 @@ DATADIR=adir
 INPUTFILENAME = afile.csv 
 ```
 
-Reasonably self-explanatory but `DATADIR` is the directory in which the input data is expected to be found and the output data will be written.
+Reasonably self-explanatory : `DATADIR` is the directory in which the input data is expected to be found and the output data will be written; `INPUTFILENAME` is the name of the file which was downloaded from ANZ exactly as it was received.
