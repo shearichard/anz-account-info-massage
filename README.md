@@ -9,13 +9,32 @@ The `prepare-downloaded-data.py` script takes no arguments so invoke is like thi
 ```
 python prepare-downloaded-data.py
 ```
-## Windows and Virtenvs ##
-Just because I forget how this stuff works in Windows this is how you invoke the virtenv (which is called 'anzmassage' in the dev env).
+##  Tested Environments ##
+### Windows / Python 2.x ###
+This code has only been run in Python 2.x on Windows 7. It may work elsewhere but it may need tweaking to do so.
+
+### Windows and Virtenvs ###
+The `requirements.txt` defines the necessary Python libraries and in the dev env I used a virtenv .
+
+There's something a bit weird (to me) about using virtenvs on windows so as a memory jogger here's how to invoke the virtenv (which is called 'anzmassage' in the dev env).
 
 ```
 .\anzmassage\Scripts\activate.bat
 ```
-## 'Local only' configs ##
+## configuration Files ##
+### Primary config files ###
+There is a primary config file which is used to contain data I don't mind committing to git.
+It's called `x` and the format is like this :
+
+```
+[DEFAULT]
+OUTPUTPAYMENTSFILENAME = PAYMENTSOUT-2016-09-01_2017-08-31.csv
+INPUTRECEIPTSFILENAME = RECEIPTSIN-2016-09-01_2017-08-31.csv
+```
+`OUTPUTPAYMENTSFILENAME` is the name which will be used for the output payments CSV file.
+`INPUTRECEIPTSFILENAME` is the name which will be used for the output receipts CSV file.
+
+## 'Local only' config files ##
 There is a 'local only' config which is used to contain data I don't want to commit to git.
 It's called `anzaccountinfomessage-localonly.ini` and the format of it is like this :
 
@@ -24,3 +43,5 @@ It's called `anzaccountinfomessage-localonly.ini` and the format of it is like t
 DATADIR=adir
 INPUTFILENAME = afile.csv 
 ```
+
+Reasonably self-explanatory but `DATADIR` is the directory in which the input data is expected to be found and the output data will be written.
