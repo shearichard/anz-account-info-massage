@@ -76,6 +76,10 @@ def makeentrysequence(dic_entry, key_seq):
     Prepare a list of dictionary keys
     with which to select elements from
     the entry dictionaries
+
+    Also do something weird in order to provide
+    an empty column to categories the entries
+    by when they're used in the target workbook.
     '''
 
     colcnt = 0
@@ -84,6 +88,9 @@ def makeentrysequence(dic_entry, key_seq):
     for k in key_seq:
         lst_out.append(dic_entry[k])
 
+    # This is the idiosyncratic bit of processing
+    # where we insert an empty column immediately
+    # after the first column
     lst_out_final = lst_out[0:1]
     lst_out_final.extend([''])
     lst_out_final.extend(lst_out[1:])
