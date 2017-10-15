@@ -24,7 +24,7 @@ There's something a bit weird (to me) about using virtenvs on windows so as a me
 ## configuration Files ##
 ### Primary config files ###
 There is a primary config file which is used to contain data I don't mind committing to git.
-It's called `x` and the format is like this :
+It's called `anzaccountinfomessage.ini` and the format is like this :
 
 ```
 [DEFAULT]
@@ -36,7 +36,7 @@ INPUTRECEIPTSFILENAME = RECEIPTSIN-2016-09-01_2017-08-31.csv
 
 ## 'Local only' config files ##
 There is a 'local only' config which is used to contain data I don't want to commit to git.
-It's called `anzaccountinfomessage-localonly.ini` and the format of it is like this :
+It's called `anzaccountinfomessage-localonly.ini`, it doesn't appear in the repository but the format of it is like this :
 
 ```
 [DEFAULT]
